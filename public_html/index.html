@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+
+
+    <title>Transmorpher 1</title>
+
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+
+
+
+
+</head>
+
+<body>
+
+    <div id="content"></div>
+    <div id="loader">Loading...</div>
+    <div id="orientation"></div>
+
+    <script type="text/javascript">
+        var _azerionIntegration = {
+            "gdId": "a6d49565f3a845aba206d1983cb01a72",
+            "advType": "gd",
+            "alxType": "std",
+            "af": false,
+            "sa": false,
+            "la": false,
+            "bd": 0,
+            "playBtn": true,
+            "cp": false
+        }
+
+
+
+
+        var gameName = "transmorpher-1.min.js";
+        var enableAnalytics;
+        var languageDetector;
+
+
+
+
+
+
+        //This all here is for cache busting;
+        function addScript(src, buster, callback) {
+            var s = document.createElement('script');
+            s.setAttribute('src', src + '?v=' + buster);
+            if (typeof callback === 'function') {
+                s.onload = callback;
+            }
+            document.body.appendChild(s);
+        }
+
+
+
+        addScript('version.js', Date.now(), function() {
+
+            addScript(gameName, version, function() {});
+
+        });
+    </script>
+</body>
+
+</html>
